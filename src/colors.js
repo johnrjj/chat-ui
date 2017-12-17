@@ -12,6 +12,4 @@ const colors = {
   red: '#E7615B',
 };
 
-export {
-  colors,
-}
+export { colors };

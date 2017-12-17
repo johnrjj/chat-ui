@@ -3,19 +3,18 @@ import styled from 'styled-components';
 import { colors } from '../colors';
 import { Search } from 'react-feather';
 
-
 const MessagesPanelContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   flex-basis: 28rem;
+  overflow-y: auto;
 `;
 
 const MessagesPanelTitle = styled.h1`
-font-size: 1.5rem;
-color: ${colors.lightBlack};
-margin: 2rem 1rem 2rem 2rem;
-
+  font-size: 1.5rem;
+  color: ${colors.lightBlack};
+  margin: 2rem 1rem 2rem 2rem;
 `;
 
 const MessagesSearch = styled.div`
@@ -31,18 +30,19 @@ const MessagesHorizontalLine = styled.hr`
   border: 0;
   border-top: 1px solid ${colors.lightestGray};
   opacity: 0.5;
-  padding: 0; 
-  margin: 0 0 2rem 2rem;
+  padding: 0;
+  margin: 0 0 0 2rem;
 `;
 
-const MessagesContainer = styled.div`
-
-`;
+const MessagesContainer = styled.div``;
 
 const MessageContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding-left: 2rem;  
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #f6f7fa;
 `;
 
 const AvatarContainer = styled.div`
@@ -78,7 +78,8 @@ const MessageContentHeaderContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 4rem;
-  margin-left: 1.5rem;  
+  margin-left: 1.5rem;
+  margin-bottom: 0.25rem;
 `;
 
 const MessageContentTitle = styled.div`
@@ -94,24 +95,23 @@ const MessageContentSubtitle = styled.div`
 `;
 
 const MessageNotificationsContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 4rem;
-margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4rem;
+  margin-right: 2rem;
 `;
 
 const MessageNotifications = styled.div`
-width: 2rem;
-height: 2rem;
-border-radius: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: ${colors.red};
-color: ${colors.white};
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.red};
+  color: ${colors.white};
 `;
-
 
 //todo, work on this, sloppy right now
 const MessagePreviewContainer = styled.div`
@@ -122,39 +122,53 @@ const MessagePreviewContainer = styled.div`
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 1.5rem;  
+  margin-left: 1.5rem;
   line-height: 1.5rem;
+  color: ${colors.lightBlack};
+  opacity: 0.7;
 `;
 
+const MessageDivider = styled.hr`
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid ${colors.lightestGray};
+  opacity: 0.5;
+  padding: 0;
+  margin: 0rem 0 0rem 7rem;
+`;
 
 const MessagesPanel = () => (
-<MessagesPanelContainer>
-  <MessagesPanelTitle>Messages</MessagesPanelTitle>
-  <MessagesSearch><Search size={20}/></MessagesSearch>
-  <MessagesHorizontalLine/>
-  <MessagesContainer>
-    <MessageContainer>
-      <AvatarContainer>
-        <AvatarImg src={'https://randomuser.me/api/portraits/men/1.jpg'}/>
-        <AvatarStatus/>
-      </AvatarContainer>
-      <MessageContentContainer>
-        <MessageContentHeaderContainer>
-          <MessageContentTitle>Andrea Smith</MessageContentTitle>
-          <MessageContentSubtitle>Senior Mentor</MessageContentSubtitle>
-        </MessageContentHeaderContainer>
-        <MessagePreviewContainer>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo risus, efficitur ut nisl in, bibendum elementum lacus. Mauris sed nunc maximus, hendrerit velit ac, tempor erat. Vivamus 
+  <MessagesPanelContainer>
+    <MessagesPanelTitle>Messages</MessagesPanelTitle>
+    <MessagesSearch>
+      <Search size={20} />
+    </MessagesSearch>
+    <MessagesHorizontalLine />
+    <MessagesContainer>
+      <MessageContainer>
+        <AvatarContainer>
+          <AvatarImg src={'https://randomuser.me/api/portraits/men/1.jpg'} />
+          <AvatarStatus />
+        </AvatarContainer>
+        <MessageContentContainer>
+          <MessageContentHeaderContainer>
+            <MessageContentTitle>Andrea Smith</MessageContentTitle>
+            <MessageContentSubtitle>Senior Mentor</MessageContentSubtitle>
+          </MessageContentHeaderContainer>
+          <MessagePreviewContainer>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo risus, efficitur ut
+            nisl in, bibendum elementum lacus. Mauris sed nunc maximus, hendrerit velit ac, tempor
+            erat. Vivamus
           </MessagePreviewContainer>
-      </MessageContentContainer>
-      <MessageNotificationsContainer>
-        <MessageNotifications>6</MessageNotifications>
-      </MessageNotificationsContainer>
-    </MessageContainer>
-  </MessagesContainer>
+        </MessageContentContainer>
+        <MessageNotificationsContainer>
+          <MessageNotifications>6</MessageNotifications>
+        </MessageNotificationsContainer>
+      </MessageContainer>
+      <MessageDivider />
+    </MessagesContainer>
   </MessagesPanelContainer>
-)
+);
 
-export { 
-  MessagesPanel,
-};
+export { MessagesPanel };

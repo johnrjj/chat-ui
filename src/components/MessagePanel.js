@@ -11,10 +11,6 @@ const MessagePanelContainer = styled.div`
   flex: 1;
 `;
 
-const Avatar = () => (
-<MessagePanelContainer/>
-)
+const Avatar = () => <MessagePanelContainer />;
 
-export { 
-  MessagePanelContainer,
-};
+export { MessagePanelContainer };

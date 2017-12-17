@@ -10,10 +10,6 @@ const SideNavContainer = styled.div`
   background-color: ${colors.green};
 `;
 
-const SideNav = () => (
-  <SideNavContainer/>
-)
+const SideNav = () => <SideNavContainer />;
 
-export { 
-  SideNav,
-};
+export { SideNav };

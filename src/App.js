@@ -7,7 +7,6 @@ import { MessagePanelContainer } from './components/MessagePanel';
 
 import styled from 'styled-components';
 
-
 const FullScreenAppContainer = styled.div`
   width: 100vw;
   height: 100vh;
@@ -20,9 +19,9 @@ class App extends Component {
   render() {
     return (
       <FullScreenAppContainer>
-        <SideNav/>
-        <MessagesPanel/>
-        <MessagePanelContainer/>
+        <SideNav />
+        <MessagesPanel />
+        <MessagePanelContainer />
       </FullScreenAppContainer>
     );
   }

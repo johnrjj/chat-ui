@@ -10,10 +10,6 @@ const AvatarImg = styled.img`
   background-color: ${colors.green};
 `;
 
-const Avatar = () => (
-<SideNavContainer/>
-)
+const Avatar = () => <SideNavContainer />;
 
-export { 
-  Avatar,
-};
+export { Avatar };
