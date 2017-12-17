@@ -6,9 +6,8 @@ import { colors } from '../colors';
 const SideNavContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
-  flex-basis: 4rem;
+  flex-basis: 5rem;
   padding-top: 0.75rem;
   background-color: ${colors.green};
 `;
@@ -17,7 +16,7 @@ const AvatarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
+  width: 100%;
   height: 4rem;
   position: relative;
   margin-bottom: 4rem;
@@ -42,6 +41,7 @@ const NavItem = styled.div`
   margin-bottom: 1rem;
   padding: 1rem 0;
   width: 100%;
+  cursor: pointer;
   background-color: ${props => (props.selected ? '#91C68B' : null)};
 `;
 

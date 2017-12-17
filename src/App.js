@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import { Camera } from 'react-feather';
+import styled from 'styled-components';
 import { SideNav } from './components/SideNav';
 import { MessagesPanel } from './components/MessagesPanel';
-import { MessagePanelContainer } from './components/MessagePanel';
-
-import styled from 'styled-components';
+import { MessagePanel } from './components/MessagePanel';
 
 const FullScreenAppContainer = styled.div`
   width: 100vw;
@@ -21,7 +18,7 @@ class App extends Component {
       <FullScreenAppContainer>
         <SideNav />
         <MessagesPanel />
-        <MessagePanelContainer />
+        <MessagePanel />
       </FullScreenAppContainer>
     );
   }

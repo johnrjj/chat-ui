@@ -171,12 +171,12 @@ const MessagesPanel = () => (
 
       <MessageContainer active>
         <AvatarContainer>
-          <AvatarImg src={'https://randomuser.me/api/portraits/men/2.jpg'} />
+          <AvatarImg src={'https://randomuser.me/api/portraits/women/2.jpg'} />
           <AvatarStatus />
         </AvatarContainer>
         <MessageContentContainer>
           <MessageContentHeaderContainer>
-            <MessageContentTitle>Andrea Smith</MessageContentTitle>
+            <MessageContentTitle>Sally Mae</MessageContentTitle>
             <MessageContentSubtitle>Senior Mentor</MessageContentSubtitle>
           </MessageContentHeaderContainer>
           <MessagePreviewContainer>
@@ -186,7 +186,7 @@ const MessagesPanel = () => (
           </MessagePreviewContainer>
         </MessageContentContainer>
         <MessageNotificationsContainer>
-          <MessageNotifications>6</MessageNotifications>
+          <MessageNotifications>3</MessageNotifications>
         </MessageNotificationsContainer>
       </MessageContainer>
 
@@ -197,8 +197,8 @@ const MessagesPanel = () => (
         </AvatarContainer>
         <MessageContentContainer>
           <MessageContentHeaderContainer>
-            <MessageContentTitle>Andrea Smith</MessageContentTitle>
-            <MessageContentSubtitle>Senior Mentor</MessageContentSubtitle>
+            <MessageContentTitle>Matt Ryan</MessageContentTitle>
+            <MessageContentSubtitle>Junior Mentor</MessageContentSubtitle>
           </MessageContentHeaderContainer>
           <MessagePreviewContainer>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo risus, efficitur ut
@@ -207,7 +207,7 @@ const MessagesPanel = () => (
           </MessagePreviewContainer>
         </MessageContentContainer>
         <MessageNotificationsContainer>
-          <MessageNotifications>6</MessageNotifications>
+          <MessageNotifications>1</MessageNotifications>
         </MessageNotificationsContainer>
       </MessageContainer>
     </MessagesContainer>
