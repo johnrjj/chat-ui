@@ -48,7 +48,7 @@ const NavItem = styled.div`
 const SideNav = () => (
   <SideNavContainer>
     <AvatarContainer>
-      <AvatarImg src={'https://randomuser.me/api/portraits/men/1.jpg'} />
+      <AvatarImg src={'https://randomuser.me/api/portraits/men/2.jpg'} />
     </AvatarContainer>
     <NavContainer>
       <NavItem>
