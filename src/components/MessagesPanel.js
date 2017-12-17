@@ -9,6 +9,8 @@ const MessagesPanelContainer = styled.div`
   height: 100%;
   flex-basis: 28rem;
   overflow-y: auto;
+  box-shadow: 4px 0 10px 4px rgba(126, 122, 122, 0.16);
+  z-index: 1;
 `;
 
 const MessagesPanelTitle = styled.h1`
@@ -42,7 +44,7 @@ const MessageContainer = styled.div`
   padding-left: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #f6f7fa;
+  background-color: ${props => (props.active ? colors.offwhite : null)};
 `;
 
 const AvatarContainer = styled.div`
@@ -166,7 +168,48 @@ const MessagesPanel = () => (
           <MessageNotifications>6</MessageNotifications>
         </MessageNotificationsContainer>
       </MessageContainer>
-      <MessageDivider />
+
+      <MessageContainer active>
+        <AvatarContainer>
+          <AvatarImg src={'https://randomuser.me/api/portraits/men/2.jpg'} />
+          <AvatarStatus />
+        </AvatarContainer>
+        <MessageContentContainer>
+          <MessageContentHeaderContainer>
+            <MessageContentTitle>Andrea Smith</MessageContentTitle>
+            <MessageContentSubtitle>Senior Mentor</MessageContentSubtitle>
+          </MessageContentHeaderContainer>
+          <MessagePreviewContainer>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo risus, efficitur ut
+            nisl in, bibendum elementum lacus. Mauris sed nunc maximus, hendrerit velit ac, tempor
+            erat. Vivamus
+          </MessagePreviewContainer>
+        </MessageContentContainer>
+        <MessageNotificationsContainer>
+          <MessageNotifications>6</MessageNotifications>
+        </MessageNotificationsContainer>
+      </MessageContainer>
+
+      <MessageContainer>
+        <AvatarContainer>
+          <AvatarImg src={'https://randomuser.me/api/portraits/men/3.jpg'} />
+          <AvatarStatus />
+        </AvatarContainer>
+        <MessageContentContainer>
+          <MessageContentHeaderContainer>
+            <MessageContentTitle>Andrea Smith</MessageContentTitle>
+            <MessageContentSubtitle>Senior Mentor</MessageContentSubtitle>
+          </MessageContentHeaderContainer>
+          <MessagePreviewContainer>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo risus, efficitur ut
+            nisl in, bibendum elementum lacus. Mauris sed nunc maximus, hendrerit velit ac, tempor
+            erat. Vivamus
+          </MessagePreviewContainer>
+        </MessageContentContainer>
+        <MessageNotificationsContainer>
+          <MessageNotifications>6</MessageNotifications>
+        </MessageNotificationsContainer>
+      </MessageContainer>
     </MessagesContainer>
   </MessagesPanelContainer>
 );

@@ -7,8 +7,8 @@ const MessagePanelContainer = styled.div`
   flex-direction: column;
   height: 100%;
   flex-basis: 32rem;
-  border: 1px solid black;
   flex: 1;
+  background-color: #f5f6f8;
 `;
 
 const Avatar = () => <MessagePanelContainer />;
